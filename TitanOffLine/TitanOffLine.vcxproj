@@ -66,15 +66,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Retail|Xbox 360'">
     <LinkIncremental>true</LinkIncremental>
-    <OutputFile>$(OutDir)XBLStealth.dll</OutputFile>
+    <OutputFile>$(OutDir)Titan.dll</OutputFile>
     <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
-    <ImageXexOutput>$(OutDir)XBLStealth.xex</ImageXexOutput>
+    <ImageXexOutput>$(OutDir)Titan.xex</ImageXexOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
     <LinkIncremental>false</LinkIncremental>
-    <OutputFile>$(OutDir)XBLStealth.dll</OutputFile>
+    <OutputFile>$(OutDir)Titan.dll</OutputFile>
     <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
-    <ImageXexOutput>$(OutDir)XBLHammer.xex</ImageXexOutput>
+    <ImageXexOutput>$(OutDir)Titan.xex</ImageXexOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Devkit|Xbox 360'">
     <LinkIncremental>false</LinkIncremental>
@@ -122,7 +122,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Retail|Xbox 360'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -140,11 +140,11 @@
       <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <AdditionalDependencies>xapilibd.lib;d3d9d.lib;d3dx9d.lib;xgraphicsd.lib;xboxkrnl.lib;xnetd.lib;xaudiod2.lib;xactd3.lib;x3daudiod.lib;xmcored.lib;xbdm.lib;vcompd.lib;xbcd.lib</AdditionalDependencies>
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
-      <ModuleDefinitionFile>XBLS.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>Titan.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\xkelib;..\xkelib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ImageXex>
-      <ConfigurationFile>XBLS.xml</ConfigurationFile>
+      <ConfigurationFile>Titan.xml</ConfigurationFile>
       <RequireFullExperience>false</RequireFullExperience>
     </ImageXex>
     <Deploy />
@@ -161,7 +161,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <StringPooling>true</StringPooling>
@@ -184,11 +184,11 @@
       <SetChecksum>true</SetChecksum>
       <AdditionalDependencies>xapilib.lib;d3d9ltcg.lib;d3dx9.lib;xgraphics.lib;xboxkrnl.lib;xnet.lib;xaudio2.lib;xact3ltcg.lib;x3daudioltcg.lib;xmcoreltcg.lib;vcomp.lib;hammer.lib</AdditionalDependencies>
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
-      <ModuleDefinitionFile>XBLS.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>Titan.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>..\xkelib;</AdditionalLibraryDirectories>
     </Link>
     <ImageXex>
-      <ConfigurationFile>XBLS.xml</ConfigurationFile>
+      <ConfigurationFile>Titan.xml</ConfigurationFile>
       <RequireFullExperience>false</RequireFullExperience>
     </ImageXex>
     <Deploy>
@@ -257,8 +257,8 @@
     <ClCompile Include="Titan.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="XBLS.def" />
-    <None Include="XBLS.xml">
+    <None Include="Titan.def" />
+    <None Include="Titan.xml">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
